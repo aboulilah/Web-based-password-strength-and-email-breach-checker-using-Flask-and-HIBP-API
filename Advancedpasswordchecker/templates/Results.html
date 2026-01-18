@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Password Breach Result</h2>
+    <p><strong>Password Entropy:</strong> {{ entropy }} bits</p>
+
+    {% if breach_count > 0 %}
+        <p style="color: red;"><strong>⚠️ Password has been found in {{ breach_count }} breaches!</strong></p>
+    {% else %}
+        <p style="color: green;"><strong>✅ Password is secure and not found in any known breach.</strong></p>
+    {% endif %}
+
+    <a href="/">Start Over</a>
+</body>
+</html>

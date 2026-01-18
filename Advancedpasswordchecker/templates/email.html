@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Breach Checker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .breached {
+            color: red;
+            font-weight: bold;
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .safe {
+            color: green;
+            font-weight: bold;
+            background-color: #e6ffe6;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Email Breach Checker</h2>
+
+    <form method="POST" action="/check_email">
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <button type="submit">Check Email</button>
+    </form>
+
+    {% if email %}
+        {% if breached %}
+            <p class="breached">❌ EMAIL HAS BEEN LEAKED!</p>
+            <p>⚠️ This email has been found in previous data breaches. Consider using a different email or securing your accounts.</p>
+        {% else %}
+            <p class="safe">✅ Email Is Safe. Proceed To Password.</p>
+            <a href="/password"><button>Enter Password</button></a>
+        {% endif %}
+    {% endif %}
+
+</body>
+</html>

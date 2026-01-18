@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef6ff;
+    color: #003366;
+    text-align: center;
+    padding: 25px;
+}
+
+h2 {
+    color: #004a99;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    margin: 10px 0;
+    border: 2px solid #004a99;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #cccccc;
+}
+
+#strengthResult, #breachResult {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Tips Box */
+.tips-box {
+    background: white;
+    border: 2px solid #cce0ff;
+    padding: 15px;
+    width: 350px;
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.tips-box h3 {
+    color: #004a99;
+    margin-bottom: 6px;
+}
+
+.tips-box ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.tips-box li {
+    padding: 4px 0;
+}
+
+/* Valid / Invalid colors */
+.valid {
+    color: green;
+    font-weight: bold;
+}
+
+.invalid {
+    color: red;
+    font-weight: bold;
+}
